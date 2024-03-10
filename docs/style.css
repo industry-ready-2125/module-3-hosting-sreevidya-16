@@ -1,0 +1,85 @@
+
+/* Add your CSS styles here */
+
+#headerr {
+    position: fixed;
+    width: 100%;
+    z-index: 1500; /* Ensure the header is above other content */
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border: 0;
+    outline: 0 none;
+    font-size: 17px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #f60;
+    color: #fff;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-menu {
+    display: flex;
+}
+
+.user-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav {
+    padding-top: 26px;
+    position: fixed;
+    top: 60px; /* Adjust as needed based on your header height */
+    width: 100%;
+    z-index: 1200; /* Ensure the navigation bar is above other content */
+    background-color: #f60;
+}
+
+#justify_center {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+

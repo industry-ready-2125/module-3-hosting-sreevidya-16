@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-store Homepage</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="./utils.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <style>
+        * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  padding-top: 130px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#header_elements {
+    style="color: white; 
+    font-size: x-large; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: orangered;
+  border: 2px solid white;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  font-weight: lighter;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <header id="headerr">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Profile</a>
+            <a href="#">Orders</a>
+            <a href="#">Account</a>
+            <a href="#">Coupons</a>
+            <a href="#">Reviews</a>
+          </div>
+          
+          <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+          </div>
+        <div class="logo"> <h2 style="color: orange; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">E-store</h2></div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="user-menu">
+          <a href="#">
+            <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+            </a>
+                        <a href="./customer.html" id="header_elements" >Customer Care</a>
+            <a href="./index.html" id="header_elements" style="color: red;" >Log Out</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="justify_center">
+            <li><div class="dropdown">
+                <button class="dropbtn">Mobiles 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">IOS</a>
+                  <a href="#">Android</a>
+                  <a href="#">Flagship</a>
+                </div>
+              </div> </li>
+              <li><div class="dropdown">
+                <button class="dropbtn">Electronics 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Laptops</a>
+                  <a href="#">Headphones</a>
+                  <a href="#">TV'S</a>
+                </div>
+              </div> </li>
+            <li><div class="dropdown">
+                <button class="dropbtn">Grocery
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Packaged Foods</a>
+                  <a href="#">Household Care</a>
+                  <a href="#">Beverages</a>
+                </div>
+              </div> </li>
+              <li><div class="dropdown">
+                <button class="dropbtn">Fashion
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Men</a>
+                  <a href="#">Women</a>
+                  <a href="#">Kids</a>
+                </div>
+              </div> </li>
+              <li><div class="dropdown">
+                <button class="dropbtn">Books
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Competitive</a>
+                  <a href="#">Historic</a>
+                  <a href="#">Kids special</a>
+                </div>
+              </div> </li>
+              <li><div class="dropdown">
+                <button class="dropbtn">Appliance 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Refrigerators</a>
+                  <a href="#">Air Conditioners</a>
+                  <a href="#">Kitchen Appliances</a>
+                </div>
+              </div> </li>
+            <li><div class="dropdown">
+                <button class="dropbtn">Personal Care
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Make up</a>
+                  <a href="#">Fragrance</a>
+                  <a href="#">Skin care</a>
+                </div>
+              </div> </li>
+            <li><a href="#">Furniture</a></li>
+            <li><div class="dropdown">
+                <button class="dropbtn">Toys
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Tricycles</a>
+                  <a href="#">Remote control toys</a>
+                  <a href="#">Musical Toys</a>
+                </div>
+              </div> </li>
+              <li><div class="dropdown">
+                <button class="dropbtn">Medicine
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Ayurvedic</a>
+                  <a href="#">First Aid</a>
+                  <a href="#">Supplements</a>
+                </div>
+              </div> </li>
+        </ul>
+    </nav>
+           
+        <main>
+            <div class="container">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 4</div>
+                      <img src="https://ae01.alicdn.com/kf/S5229b2246ce24996b61f72e5dcb0885aP.jpg_.webp"  style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 4</div>
+                      <img src="https://eshop.lycamobile.co.uk/media/wysiwyg/apple.png" style="width:100%" height="245px">
+                      <div class="text"></div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 4</div>
+                      <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/2d46d868f6692aeb.jpg?q=20" style="width:100%">
+                      <div class="text"></div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/2011abb6c63c5f4d.jpeg?q=20" style="width:100%" height="245px" >
+                        <div class="text"></div>
+                      </div>
+
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span>
+                      <span class="dot"></span> 
+                    </div>
+                    
+    
+                <div class="card">
+                    <div style="background-color: darkorange; text-align: center;"><h2>***Top Deals***</h2></div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/89/2e/7e/892e7ea7e89cd3ac8cd45446c2b63a2e.jpg" alt="" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">ASUS VivoBook S14</p>
+                            <p class="text-center my-1">16GB/512 I5 I5 Gen</p>
+                            <p class="text-center my-1">20% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/47/2f/71/472f714e7bda9494f5357a91a086acfb.jpg"
+                            alt="" height="140px" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">samsung watch</p>
+                            <p class="text-center my-1">Amoled display ..</p>
+                            <p class="text-center my-1">29% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/3a/7d/1d/3a7d1d8047eb1ae6bf95d5c2aab99978.jpg"
+                            alt="" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">IQOO Z7 s 5G</p>
+                            <p class="text-center my-1">8GB/256</p>
+                            <p class="text-center my-1">15% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/f6/be/50/f6be50522c831afb08a136371c0903b9.jpg"
+                            alt="" width="200px" height="130px">
+                        <div class="lines">
+                            <p class="text-center my-1">SONY TV</p>
+                            <p class="text-center my-1">4k Dolby Atmos</p>
+                            <p class="text-center my-1">33% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/0e/2e/c0/0e2ec0ea81dfe91e53058f74c57c6ccd.jpg"
+                            alt="" width="190px" height="130px">
+                        <div class="lines">
+                            <p class="text-center my-1">Swinging Sofa</p>
+                            <p class="text-center my-1">Premium Leather</p>
+                            <p class="text-center my-1">15% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/be/8a/b5/be8ab52314636eb8c76e37048e069881.jpg"
+                            alt="" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Bianohi Cycle</p>
+                            <p class="text-center my-1">Multi Speed</p>
+                            <p class="text-center my-1">40% Off</p>
+                        </div>
+                    </div>
+    
+                <div class="card">
+                    <div style="background-color: darkorange; text-align: center;"><h2>***Best Sellers***</h2></div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/48/50/67/485067d9570ba3f9a3cfd9c80dd38924.jpg"
+                            alt="" height="150" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Iphone 14 pro Max</p>
+                            <p class="text-center my-1">512Gb</p>
+                            <p class="text-center my-1">9% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/f1/e5/f3/f1e5f38e77fdaf187b70e2b4c785e1fc.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Atomic Habbits</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/d5/0d/a7/d50da7cd7bb101c356c7278005e1c00b.jpg"
+                            alt="" height="140px" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">Boat 161 buds</p>
+                            <p class="text-center my-1">45 hours playback</p>
+                            <p class="text-center my-1">20% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/62/c3/d7/62c3d7336a0ebc71ecde6a91f2d77bc4.jpg"
+                            alt="" height="140x" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Fastrack</p>
+                            <p class="text-center my-1">IP67 waterproff</p>
+                            <p class="text-center my-1">17% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/b9/1b/aa/b91baa4d4af2b1b6806f8f44a6e04500.jpg"
+                            alt="" height="140px" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">PUMA Hoddie</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/4e/76/ec/4e76ec84e38399e45a271ab124f7204d.jpg"
+                            alt="" height="140px" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">HP pavilion</p>
+                            <p class="text-center my-1">Intel core i7</p>
+                            <p class="text-center my-1">26% Off</p>
+                        </div>
+                    </div>
+    
+                <div class="card">
+                    <div style="background-color: darkorange; text-align: center;"><h2>***Best of Electronics***</h2></div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/a8/ea/24/a8ea240bd778e50eefcad106984f66eb.jpg"
+                            alt="" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">Portronics wireless mouse</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/07/fa/c5/07fac50e6988ab2364cb090ceef33918.jpg"
+                            alt="" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">phlips Iron Box</p>
+                            <p class="text-center my-1">1000 watt</p>
+                            <p class="text-center my-1">33% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/dc/8e/66/dc8e66e34615e3b805f588aac70427e7.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Alexa Echo dot</p>
+                            <p class="text-center my-1">3rd Gen</p>
+                            <p class="text-center my-1">17% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/67/f2/eb/67f2eba268dcc852308eee70b428a17c.jpg"
+                            alt="" height="140px" width="200px">
+                        <div class="lines">
+                            <p class="text-center my-1">Boat wired Earphones</p>
+                            <p class="text-center my-1">Dolby Audio</p>
+                            <p class="text-center my-1">42% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/7f/dc/2f/7fdc2f00b1790eccca942115870a28e3.jpg"
+                            alt="" height="160px" width="180px">
+                        <div class="lines">
+                            <p class="text-center my-1">Galaxy s23 ultra</p>
+                            <p class="text-center my-1">8GB RAM/256Gb</p>
+                            <p class="text-center my-1">19% Off</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/87/df/3d/87df3d04d02a9b56852fe5df822b2bae.jpg"
+                            alt="" height="160px" width="180px">
+                        <div class="lines">
+                            <p class="text-center my-1">oneplus ce2</p>
+                            <p class="text-center my-1">64Mp camera</p>
+                            <p class="text-center my-1">17% Off</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                    <div style="background-color: darkorange; text-align: center;"><h2>***Men And Women Fashion***</h2></div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/b4/d6/bf/b4d6bfd1daf880b5dc508c8f9090acdf.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">PUMA hoddie</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/49/36/28/4936289136eb5678da0aade3d9f4a629.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Allen Solly Shirt</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/dc/72/1c/dc721cade6ea2f59f0d3427e473796b5.jpg"
+                            alt="" height="140" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">Indian Cargo</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/9c/f7/85/9cf7855b318cd37adc3eab31ed9b910c.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">kanchipuram silk saree</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/564x/68/04/61/6804613afee54344b3cbd06e31cbb8fb.jpg"
+                            alt="" height="140" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">deepcreek</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <img src="https://i.pinimg.com/736x/41/8b/ce/418bce27cc2957041b5a97be25ceda2c.jpg"
+                            alt="" height="140px" width="190px">
+                        <div class="lines">
+                            <p class="text-center my-1">sevia</p>
+                            <p class="text-center my-1">20% Off</p>
+                            <p class="text-center my-1">Grab NOW!</p>
+                        </div>
+                    </div>
+            </div>
+        </main>
+        <footer class="flex-all-center">
+            </p>Thanks for visiting </p>
+    
+        </footer>
+    <main>
+    <script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+</body>
+</html>

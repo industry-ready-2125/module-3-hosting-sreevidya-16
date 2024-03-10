@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./styler.css" />
+    <link rel="stylesheet" href="./style_regd.css" />
+
+    <!--Boxicons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+      #back{
+        justify-content: left;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .home-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #333; /* Adjust the color as needed */
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+
+    <!--login page-->
+    <section class="container forms">
+      <a href="index.html" class="home-link"><span class="material-symbols-outlined">
+        home
+        </span></a>
+      <div class="form login">
+        <div class="form-content">
+          
+          <header>Login</header>
+
+          <form id="loginForm" action="#">
+            <div class="field input-field">
+              <input id="email" type="email" placeholder="Email" class="input" required>
+            </div>
+
+            <div class="field input-field">
+              <input id="password" type="password" placeholder="Password" class="password" required>
+            </div>
+
+            <div class="field button-field">
+              <button type="button" onclick="validateAndRedirect()">Login</button>
+            </div>
+          </form>
+
+          <div class="form-link">
+            <span>Don't have an account?
+              <a href="./register.html" class="link signup-link">Register</a></span>
+          </div>
+          <div id="back">
+            <a href="./index.html">Back To Home</a>
+          </div>
+        </div>
+
+    <script>
+      function validateAndRedirect() {
+        // Get the values of the email and password fields
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        // Regular expression to validate email format
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        // Check if the email is in a valid format
+        if (!email.match(emailPattern)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Perform form validation here (e.g., checking if email and password are valid)
+
+        // For the sake of this example, let's assume both fields are non-empty
+        if (email && password) {
+          // Redirect to the home page if the fields are not empty
+          window.location.href = "./index1.html";
+        } else {
+          // Display an error message or handle validation as needed
+          alert("Please fill in both email and password fields.");
+        }
+      }
+    </script>
+
+  </body>
+</html>

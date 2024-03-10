@@ -1,0 +1,180 @@
+
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset some default styles */
+        html {
+            background-color: #007BFF;
+        }
+        body, h1, h2, h3, p, form {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the login form vertically and horizontally */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: orange;
+        }
+
+        /* Style the login form container */
+        .login-container {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Style the form elements */
+        form {
+            text-align: left; /* Align form elements to the left */
+        }
+
+        form label {
+            display: block; /* Display labels as block elements */
+            margin: 10px 0;
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form input[type="tel"],
+        form input[type="date"],
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        /* Style the login button */
+        form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Style the login button on hover */
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" width="40%">
+        <h2>Register</h2>
+        <form id="loginForm">
+            <div class="row">
+                <div class="col-25">
+                    <label for="firstName">First Name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" placeholder="Enter your first name" id="firstName" name="firstName" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="lastName">Last Name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" placeholder="Enter your last name" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="dob">Date of Birth:</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="phoneNumber">Phone Number:</label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" placeholder="Enter your Number (+91)" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" placeholder="Enter your Email id" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label><b>Gender</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="gender" value="Male">
+                    <label for="Male">Male</label>
+                    <input type="radio" name="gender" value="Female">
+                    <label for="Female">Female</label>
+                    <input type="radio" name="gender" value="Others">
+                    <label for="Others">Others</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label><b>Interesting subject</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" name="subject" value="M3"> M3
+                    <input type="checkbox" name="subject" value="SE"> SE
+                    <input type="checkbox" name="subject" value="OS"> OS
+                    <input type="checkbox" name="subject" value="EP"> EP
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
